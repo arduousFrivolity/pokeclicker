@@ -199,35 +199,48 @@ GymList['Elite Lance'] = new Gym(
     [new GymBadgeRequirement(BadgeEnums.Elite_Agatha)]
 );
 // Kanto Champion
+const blueCommon = [
+    new GymPokemon('Pidgeot', 52340, 59),
+    new GymPokemon('Alakazam', 56320, 57),
+    new GymPokemon('Rhydon', 58340, 59),
+];
 GymList['Champion Blue'] = new Champion(
     'Blue',
     'Champion Blue',
-    [
-        new GymPokemon('Pidgeot', 52340, 59),
-        new GymPokemon('Alakazam', 56320, 57),
-        new GymPokemon('Rhydon', 58340, 59),
-    ],
+    [],
     BadgeEnums.Elite_KantoChampion,
     10000,
     'NO! That can\'t be! You beat me at my best! After all that work to become the League Champ? My reign is over already? It\'s not fair!',
     [new GymBadgeRequirement(BadgeEnums.Elite_Lance)],
     // Bulbasaur
     [
+        ...blueCommon,
         new GymPokemon('Exeggutor', 57520, 59),
         new GymPokemon('Gyarados', 65340, 61),
         new GymPokemon('Charizard', 70000, 63),
     ],
     // Charmander
     [
+        ...blueCommon,
         new GymPokemon('Arcanine', 57520, 59),
         new GymPokemon('Exeggutor', 65340, 61),
         new GymPokemon('Blastoise', 70000, 63),
     ],
-    // Squirtle/Pikachu
+    // Squirtle
     [
+        ...blueCommon,
         new GymPokemon('Gyarados', 57520, 59),
         new GymPokemon('Arcanine', 65340, 61),
         new GymPokemon('Venusaur', 70000, 63),
+    ],
+    //Pikachu
+    [
+        new GymPokemon('Sandslash', 52340, 59),
+        new GymPokemon('Alakazam', 56320, 57),
+        new GymPokemon('Exeggutor', 58340, 59),
+        new GymPokemon('Ninetales', 57520, 59),
+        new GymPokemon('Cloyster', 65340, 61),
+        new GymPokemon('Jolteon', 70000, 63),
     ]
 );
 
@@ -609,6 +622,7 @@ GymList['Champion Wallace'] = new Champion(
     16000,
     'I, the Champion, fall in defeat… That was wonderful work. You were elegant, infuriatingly so. And yet it was utterly glorious! Kudos to you! You are a truly noble Pokémon Trainer!',
     [new GymBadgeRequirement(BadgeEnums.Elite_Drake)],
+    undefined,
     undefined,
     undefined,
     undefined,
@@ -1551,17 +1565,17 @@ GymList['Champion Hau'] = new Champion(
         new GymBadgeRequirement(BadgeEnums.Elite_Acerola),
         new GymBadgeRequirement(BadgeEnums.Elite_Kahili),
     ],
-    // Bulbasaur
+    // Rowlet
     [
         new GymPokemon('Flareon', 89636471, 58),
         new GymPokemon('Primarina', 96725389, 60),
     ],
-    // Charmander
+    // Litten
     [
         new GymPokemon('Vaporeon', 89636471, 58),
         new GymPokemon('Decidueye', 96725389, 60),
     ],
-    // Squirtle/Pikachu
+    // Popplio
     [
         new GymPokemon('Leafeon', 89636471, 58),
         new GymPokemon('Incineroar', 96725389, 60),

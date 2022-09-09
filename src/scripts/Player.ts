@@ -75,6 +75,9 @@ class Player {
                 case GameConstants.Starter.Squirtle:
                     this.regionStarters.push(ko.observable(2));
                     break;
+                case GameConstants.Starter.Pikachu:
+                    this.regionStarters.push(ko.observable(3));
+                    break;
             }
         }
         for (let i = 1; i <= GameConstants.MAX_AVAILABLE_REGION; i++) {

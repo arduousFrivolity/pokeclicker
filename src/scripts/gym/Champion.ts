@@ -13,6 +13,7 @@ class Champion extends Gym {
         public alternativePokemon1?: GymPokemon[],
         public alternativePokemon2?: GymPokemon[],
         public alternativePokemon3?: GymPokemon[],
+        public alternativePokemon4?: GymPokemon[],
         public rewardFunction = () => {}
     ) {
         super(leaderName, town, basePokemon, badgeReward, moneyReward, rewardMessage, requirements, rewardFunction);
@@ -37,6 +38,12 @@ class Champion extends Gym {
             default: {
                 if (this.alternativePokemon3 != undefined) {
                     this.pokemons.push(...this.alternativePokemon3);
+                }
+                break;
+            }
+            case 3: {
+                if (this.alternativePokemon4 != undefined) {
+                    this.pokemons.push(...this.alternativePokemon4);
                 }
                 break;
             }
